@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = NSLocalizedString(@"Live", nil);
+    self.title = NSLocalizedString(@"生活", nil);
 }
 
 - (void)didReceiveMemoryWarning {

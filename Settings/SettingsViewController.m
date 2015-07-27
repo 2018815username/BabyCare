@@ -25,7 +25,7 @@ static NSString * const kMenuItemTitle = @"kMenuItemTitle";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = NSLocalizedString(@"Settings", nil);
+    self.title = NSLocalizedString(@"设置", nil);
     self.navigationItem.rightBarButtonItem = self.signoutButtonItem;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
