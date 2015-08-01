@@ -13,8 +13,8 @@
 #import "DiaryManager.h"
 #import "Theme.h"
 
-@interface DiaryListViewController ()
-<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+@interface DiaryListViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) UIBarButtonItem *addButtonItem;
@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSFetchRequest *fetchRequest;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
 @end
 
 @implementation DiaryListViewController
@@ -32,9 +33,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [Theme backgroundColorWithAlpha:1.0];
-    self.title = NSLocalizedString(@"日记", nil);
+    self.title = NSLocalizedString(@"记事", nil);
     self.navigationItem.rightBarButtonItem = self.addButtonItem;
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleDiaryManagerNotification:)
                                                  name:@"DiaryManagerNotification"

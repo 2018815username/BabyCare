@@ -2,8 +2,8 @@
 //  StatsViewController.m
 //  BabyCare
 //
-//  Created by Chuang HsuanChih on 7/15/15.
-//  Copyright (c) 2015 Hsuan-Chih Chuang. All rights reserved.
+//  Created by yuanhua on 7/19/15.
+//  Copyright (c) 2015 yuanhua. All rights reserved.
 //
 
 #import "StatsViewController.h"
@@ -157,7 +157,7 @@
     }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM dd, YYYY\nHH:mm"];
+    [dateFormatter setDateFormat:@"yy-MM-dd HH:mm:ss"];
     
     NSTimeInterval birthTime = [[NSDate date] timeIntervalSince1970] - 60*60*24*7,
     daysPassed = floorl(([self.historicData[row][@"time"] doubleValue] - birthTime)/(60*60*24));

@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface UserDefaults : NSObject
+/**
+ 保存登录信息
+ */
 + (void) saveObject:(id)object key:(NSString *)key;
+/**
+ 加载保存的登录信息
+ */
 + (id) loadObjectWithKey:(NSString *)key;
 @end

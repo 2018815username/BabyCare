@@ -2,8 +2,8 @@
 //  LoginViewController.m
 //  BabyCare
 //
-//  Created by Chuang HsuanChih on 7/14/15.
-//  Copyright (c) 2015 Hsuan-Chih Chuang. All rights reserved.
+//  Created by yuanhua on 7/19/15.
+//  Copyright (c) 2015 yuanhua. All rights reserved.
 //
 
 #import "LoginViewController.h"
@@ -25,7 +25,9 @@
     
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
-    
+    self.usernameTextField.placeholder = @"请输入用户名";
+    self.passwordTextField.placeholder = @"请输入用户密码";
+    [self.passwordTextField setSelected:YES];
     [self.signInButton addTarget:self
                           action:@selector(buttonTapped:)
                 forControlEvents:UIControlEventTouchUpInside];

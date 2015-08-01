@@ -2,14 +2,14 @@
 //  NewDiaryViewController.m
 //  BabyCare
 //
-//  Created by Chuang HsuanChih on 7/19/15.
-//  Copyright (c) 2015 Hsuan-Chih Chuang. All rights reserved.
+//  Created by yuanhua on 7/19/15.
+//  Copyright (c) 2015 yuanhua. All rights reserved.
 //
 
 #import "NewDiaryViewController.h"
 #import "Theme.h"
 
-static NSString * const contentTextViewPlaceHolder = @"Something interesting happened to the baby?";
+static NSString * const contentTextViewPlaceHolder = @"一些有趣的事情发生在宝宝身上?";
 
 @interface NewDiaryViewController ()
 <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -45,9 +45,14 @@ static NSString * const contentTextViewPlaceHolder = @"Something interesting hap
     [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                   target:self
                                                   action:@selector(buttonTapped:)];
+    
+    
     self.navigationItem.rightBarButtonItem.enabled = (self.titleTextField.text.length > 0);
     
     self.title = NSLocalizedString(@"新建日记", nil);
+    
+    self.navigationItem.leftBarButtonItem.title = @"取消";
+    self.navigationItem.rightBarButtonItem.title = @"保存";
     
     self.titleTextField.delegate = self;
     

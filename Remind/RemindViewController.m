@@ -2,8 +2,8 @@
 //  RemindViewController.m
 //  BabyCare
 //
-//  Created by Chuang HsuanChih on 7/17/15.
-//  Copyright (c) 2015 Hsuan-Chih Chuang. All rights reserved.
+//  Created by yuanhua on 7/19/15.
+//  Copyright (c) 2015 yuanhua. All rights reserved.
 //
 
 #import "RemindViewController.h"
@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBarHidden = NO;
-    self.title = NSLocalizedString(@"Remind", nil);
+    self.title = NSLocalizedString(@"提醒", nil);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
@@ -43,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 5;
 }
 
 
@@ -61,11 +61,11 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.textLabel.font = [Theme fontOfSize:14.0];
-    cell.textLabel.text = NSLocalizedString(@"The Baby's temperature is 42 degrees", nil);
+    cell.textLabel.text = NSLocalizedString(@"宝宝的体温是37.5", nil);
     
     cell.detailTextLabel.font = [Theme boldFontOfSize:12.0];
     cell.detailTextLabel.textColor = [UIColor redColor];
-    cell.detailTextLabel.text = NSLocalizedString(@"three hours ago, hh:mm:ss", nil);
+    cell.detailTextLabel.text = NSLocalizedString(@"3小时前, 12:56:22", nil);
     
     cell.backgroundColor = [Theme backgroundColorWithAlpha:1];
     return cell;

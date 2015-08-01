@@ -12,11 +12,17 @@
 
 @interface DiaryEntry : NSManagedObject
 
-@property (nonatomic, retain) NSDate * creationTime;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * content;
+//创建时间
+@property (nonatomic, retain) NSDate *creationTime;
+//标题
+@property (nonatomic, retain) NSString *title;
+//内容
+@property (nonatomic, retain) NSString *content;
+//是不是有图片
 @property (nonatomic, retain) NSNumber *hasImage;
+//图片的长
 @property (nonatomic, retain) NSNumber *imageWidth;
+//图片的宽
 @property (nonatomic, retain) NSNumber *imageHeight;
 
 @end
